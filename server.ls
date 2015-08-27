@@ -4,7 +4,8 @@ require \xonom
     tty = require \tty.js
     app = tty.create-server do
       port: process.env.PORT || 80
-      users: []
+      users:
+        admin: 'complicatedpassword'
       cwd: require('path').resolve(process.cwd!, \../demo)
       static: require(\path).resolve(__dirname, \../client)
       shell: \bash
